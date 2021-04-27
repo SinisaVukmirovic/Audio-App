@@ -18,7 +18,7 @@ body {
 }
 
 .app {
-    background-color: #333;
+    background-color: pink;
     border-radius: 15px;
     box-shadow: 0 20px 20px 0 rgba(152, 69, 69, 0.6);
     display: flex;
@@ -38,7 +38,7 @@ body {
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
-    bottom: 100%;
+    bottom: 50%;
     left: 50%;
     width: 20px;
     height: 20px;
@@ -131,9 +131,9 @@ body {
 }
 
 .progress {
-    background-color: #fe8daa;
+    background-color: crimson;
     border-radius: 5px;
     height: 100%;
-    width: 0%;
+    width: 40%;
     transition: width 0.1s linear;
 }

@@ -12,26 +12,27 @@
 
     <h1>Audio App</h1>
 
-    <div class="app">
+    <div id="app" class="app">
         <div class="soundtrack-info">
             <h4 class="title"></h4>
 
-            <div class="progress-container">
-                <div class="progress"></div>
-            </div>
-
-            <div class="image">
-                <img src="./imgs/night-elf.jpg" alt="Soundtrack cover" id="cover">
-            </div>
-
-            <div class="navigation">
-                <button id="prev" class="action-btn">prev</button>
-                <button id="play" class="action-btn large">PLAY</button>
-                <button id="next" class="action-btn">next</button>
+            <div id="progress-container" class="progress-container">
+                <div id="progress" class="progress"></div>
             </div>
         </div>
 
         <audio src="./audio/02 - the night elves' song.mp3" id="audio"></audio>
+
+        <div class="image">
+            <img src="./imgs/Untitled-1.jpg" alt="Soundtrack cover" id="cover">
+        </div>
+
+        <div class="navigation">
+            <button id="prev" class="action-btn">prev</button>
+            <button id="play" class="action-btn large">PLAY</button>
+            <button id="next" class="action-btn">next</button>
+        </div>
+
     </div>
     
 </body>
