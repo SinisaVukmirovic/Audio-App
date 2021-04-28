@@ -80,7 +80,7 @@
   }
   
   .action-btn {
-    background-color: crimson;
+    background-color: transparent;
     border: 0;
     color: #eee;
     font-size: 20px;
@@ -90,7 +90,7 @@
   }
   
   .action-btn.action-btn-big {
-    color: #cdc2d0;
+    color: #3f2d44;
     font-size: 30px;
   }
   
