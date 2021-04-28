@@ -75,4 +75,36 @@ const nextTrack = () => {
 prevBtn.addEventListener('click', prevTrack);
 nextBtn.addEventListener('click', nextTrack);
 
+const updateProgress = (e) => {
+    const { duration, currentTime } = e.srcElement;
+
+    const progressPercent = (currentTime / duration) * 100;
+
+    progress.style.width = `${progressPercent}%`;
+}
+
+audio.addEventListener('timeupdate', updateProgress);
+
+// using function since we use the THIS keyword
+function setProgress(e) {
+    const width = this.clientWidth;
+    const clickOnX = e.offsetX;
+    const duration = audio.duration;
+
+    console.log(width, clickOnX, duration);
+
+    audio.currentTime = (clickOnX / width) * duration;
+}
+
+progressContainer.addEventListener('click', setProgress);
+
+// audio.addEventListener('ended', nextTrack);
+audio.addEventListener('ended', () => {
+    pauseTrack();
+
+    setTimeout(() => {
+        nextTrack();
+    }, 2000);
+});
+
 loadTrack(tracks[trackIndex]);
