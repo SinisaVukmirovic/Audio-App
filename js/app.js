@@ -19,25 +19,60 @@ const loadTrack = (track) => {
 }
 
 const playTrack = () => {
-    app.classList.toggle('play');
+    app.classList.add('play');
+
     playBtn.querySelector('i.fas').classList.remove('fa-play');
     playBtn.querySelector('i.fas').classList.add('fa-pause');
+
+    audio.play();
 }
 
 const pauseTrack = () => {
-    app.classList.toogle('play');
+    app.classList.remove('play');
+
     playBtn.querySelector('i.fas').classList.remove('fa-pause');
-    playBtn.querySelector('i.fas').classList.add('fa-play');    
+    playBtn.querySelector('i.fas').classList.add('fa-play'); 
+    
+    audio.pause();
+    
 }
 
 playBtn.addEventListener('click', () => {
-    const isPlaying = app.classList.contains('.play');
+    const isPlaying = app.classList.contains('play');
+    console.log(isPlaying);
 
     if (isPlaying) {
-        pauseTrack();
+        pauseTrack();   
     } else {
         playTrack();
     }
 });
+
+const prevTrack = () => {
+    trackIndex--;
+
+    if (trackIndex < 0) {
+        trackIndex = tracks.length - 1;
+    }
+
+    loadTrack(tracks[trackIndex]);
+
+    playTrack();
+}
+
+const nextTrack = () => {
+    trackIndex++;
+
+    if (trackIndex > tracks.length - 1) {
+        trackIndex = 0;
+    }
+
+    loadTrack(tracks[trackIndex]);
+
+    playTrack();
+}
+
+prevBtn.addEventListener('click', prevTrack);
+nextBtn.addEventListener('click', nextTrack);
 
 loadTrack(tracks[trackIndex]);
