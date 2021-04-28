@@ -19,13 +19,13 @@ const loadTrack = (track) => {
 }
 
 const playTrack = () => {
-    app.classList.add('play');
+    app.classList.toggle('play');
     playBtn.querySelector('i.fas').classList.remove('fa-play');
     playBtn.querySelector('i.fas').classList.add('fa-pause');
 }
 
 const pauseTrack = () => {
-    app.classList.remove('play');
+    app.classList.toogle('play');
     playBtn.querySelector('i.fas').classList.remove('fa-pause');
     playBtn.querySelector('i.fas').classList.add('fa-play');    
 }
