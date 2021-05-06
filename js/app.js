@@ -9,7 +9,7 @@ const title = document.querySelector('.title');
 const cover = document.querySelector('#cover');
 
 const tracks = ['last days of the alliance', 'last days of the scourge', 'night elves song', 'remnants of the horde'];
-const appBg = ['cornflowerblue', 'cyan', 'greenyellow', 'burlywood']
+const appBg = ['cornflowerblue', 'cyan', 'greenyellow', 'burlywood'];
 
 let trackIndex = 0;
 let appBgIdx = 0;
@@ -19,7 +19,7 @@ const loadTrack = (track, bg) => {
     audio.src = `./audio/${track}.mp3`;
     cover.src = `./imgs/${track}.jpg`;
 
-    app.style.background = bg;
+    // app.style.background = bg;
 }
 
 const playTrack = () => {

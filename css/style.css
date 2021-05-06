@@ -1,19 +1,91 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* height: 100vh; */
+  background: #222;
+
+  /* background-image: url('../imgs/bg.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain; */
+
+  /* background: url('../imgs/bg.jpg') top center no-repeat , 
+              url('../imgs/wc3logo.jpg') center no-repeat ;
+
+              background-size: contain; */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.offscreen {
+  position: absolute;
+  left: -100rem;
+}
+
+.image {
+  width: 10rem;
+}
+
+.app {
+  outline: 1px solid lime;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   
   
-  body {
+  body {    
+    max-height: 100vh;
+    padding: 2rem 1rem;
     background-color: #222;
     color: #eee;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-family: 'Lato', sans-serif;
     margin: 0;
 
-    /* background-image: url('../imgs/bg.jpg'); */
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -21,8 +93,15 @@
   h1 {
     color: burlywood;
   }
-  
+
+  .offscreen {
+    position: absolute;
+    left: -100rem;
+  }
+
   .app {
+    width: 90vw;
+    margin: 0 auto;
     background-color: #222;
     color: #222;
     padding: 1rem;
@@ -91,7 +170,6 @@
   .action-btn {
     background-color: transparent;
     border: 0;
-    /* color: #eee; */
     font-size: 20px;
     cursor: pointer;
     padding: 10px;
@@ -145,4 +223,4 @@
     height: 100%;
     width: 0%;
     transition: width 0.1s linear;
-  }
+  } */
