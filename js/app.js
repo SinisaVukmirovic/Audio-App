@@ -59,9 +59,15 @@ const prevTrack = () => {
         trackIndex = tracks.length - 1;
     }
 
-    loadTrack(tracks[trackIndex]);
+    app.classList.remove('play');
+    audio.pause();
 
-    playTrack();
+    setTimeout(() => {
+        app.classList.add('play');
+        loadTrack(tracks[trackIndex]);
+        playTrack();
+    }, 1500);
+
 }
 
 const nextTrack = () => {
@@ -71,9 +77,14 @@ const nextTrack = () => {
         trackIndex = 0;
     }
 
-    loadTrack(tracks[trackIndex]);
+    app.classList.remove('play');
+    audio.pause();
 
-    playTrack();
+    setTimeout(() => {
+        app.classList.add('play');
+        loadTrack(tracks[trackIndex]);
+        playTrack();
+    }, 1500);
 }
 
 prevBtn.addEventListener('click', prevTrack);
