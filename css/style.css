@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -46,6 +48,7 @@ img {
   overflow: hidden;
 }
   .app .soundtrack-info {
+    font-family: 'Reggae One', cursive;
     z-index: 20;
     display: flex;
     flex-direction: column;
@@ -67,8 +70,22 @@ img {
     
     .progress-container {
       background: lime;
-      height: .5rem;
+      height: 1rem;
+      border-radius: 1rem;
+      border: 3px solid #222;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
     }
+      .progress-container .progress {
+        position: relative;
+        z-index: 1111;
+        background-color: blue;
+        transition: width 0.1s linear;
+        width: 0%;
+        height: .75rem;
+      }
   
   .navigation {
     z-index: 30;
@@ -87,6 +104,7 @@ img {
     }
       .navigation .action-btn {
         font-size: 1.5rem;
+        cursor: pointer;
       }
       .navigation .large {
         font-size: 2rem;

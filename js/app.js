@@ -3,7 +3,7 @@ const prevBtn = document.querySelector('#prev');
 const playBtn = document.querySelector('#play');
 const nextBtn = document.querySelector('#next');
 const audio = document.querySelector('#audio');
-const progress = document.querySelector('.progress');
+const progress = document.querySelector('#progress');
 const progressContainer = document.querySelector('.progress-container');
 const title = document.querySelector('.title');
 const cover = document.querySelector('#cover');
@@ -96,6 +96,13 @@ const updateProgress = (e) => {
     const progressPercent = (currentTime / duration) * 100;
 
     progress.style.width = `${progressPercent}%`;
+
+
+
+
+
+    document.querySelector('#time').innerText = ((duration - currentTime) / 60);
+
 }
 
 audio.addEventListener('timeupdate', updateProgress);
