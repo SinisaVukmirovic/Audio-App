@@ -36,6 +36,7 @@ img {
 .image {
   width: 50vw;
   max-width: 15rem;
+  margin-bottom: -3rem;
   /* transform: translateY(100%) scale(.2); */
   transition: transform 2.5s ease-in-out;
 }
@@ -57,7 +58,7 @@ img {
     max-width: 28rem;
     height: 20vh;
     padding: 0 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     background: red;
     border-radius: 1rem 1rem 0 0;
     /* transform: translateY(90%); */
@@ -110,10 +111,10 @@ img {
         font-size: 2rem;
       }
 
-  .app:not(.play) .soundtrack-info {
+  .app:not(.showApp) .soundtrack-info {
     transform: translateY(90%);
   }
-  .app:not(.play) .image {
+  .app:not(.showApp) .image {
     transform: translateY(200%) scale(.1);
   }
 

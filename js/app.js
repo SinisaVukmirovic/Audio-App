@@ -23,7 +23,7 @@ const loadTrack = (track, bg) => {
 }
 
 const playTrack = () => {
-    app.classList.add('play');
+    app.classList.add('play', 'showApp');
 
     playBtn.querySelector('i.fas').classList.remove('fa-play');
     playBtn.querySelector('i.fas').classList.add('fa-pause');
@@ -43,7 +43,7 @@ const pauseTrack = () => {
 
 playBtn.addEventListener('click', () => {
     const isPlaying = app.classList.contains('play');
-    console.log(isPlaying);
+    // console.log(isPlaying);
 
     if (isPlaying) {
         pauseTrack();   
@@ -59,11 +59,11 @@ const prevTrack = () => {
         trackIndex = tracks.length - 1;
     }
 
-    app.classList.remove('play');
+    app.classList.remove('play', 'showApp');
     audio.pause();
 
     setTimeout(() => {
-        app.classList.add('play');
+        app.classList.add('play',  'showApp');
         loadTrack(tracks[trackIndex]);
         playTrack();
     }, 1500);
@@ -77,11 +77,11 @@ const nextTrack = () => {
         trackIndex = 0;
     }
 
-    app.classList.remove('play');
+    app.classList.remove('play', 'showApp');
     audio.pause();
 
     setTimeout(() => {
-        app.classList.add('play');
+        app.classList.add('play', 'showApp');
         loadTrack(tracks[trackIndex]);
         playTrack();
     }, 1500);
