@@ -62,7 +62,7 @@ img {
     background: red;
     border-radius: 1rem 1rem 0 0;
     /* transform: translateY(90%); */
-    transition: transform 1s ease-in-out .5s;
+    transition: transform 1s ease-in-out .75s;
     /* transition-delay: .5s; */
   }
     .soundtrack-info .title {
@@ -115,7 +115,7 @@ img {
     transform: translateY(90%);
   }
   .app:not(.showApp) .image {
-    transform: translateY(200%) scale(.1);
+    transform: translateY(500%) scale(.1);
   }
 
 

@@ -66,7 +66,7 @@ const prevTrack = () => {
         app.classList.add('play',  'showApp');
         loadTrack(tracks[trackIndex]);
         playTrack();
-    }, 1500);
+    }, 1750);
 
 }
 
@@ -84,7 +84,7 @@ const nextTrack = () => {
         app.classList.add('play', 'showApp');
         loadTrack(tracks[trackIndex]);
         playTrack();
-    }, 1500);
+    }, 1750);
 }
 
 prevBtn.addEventListener('click', prevTrack);
