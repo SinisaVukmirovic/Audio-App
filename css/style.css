@@ -10,35 +10,54 @@ body {
   display: grid;
   place-items: space-between;
   height: 100vh;
-  background: #222;
+  background: #020003;
   color: #eee;
-  font-family: sans-serif;
+  font-family: 'Reggae One', cursive;
   text-align: center;
-  padding: 3rem 0 0;
-
-  /* background-image: url('../imgs/bg.jpg');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain; */
-
-  /* background: url('../imgs/bg.jpg') top center no-repeat , 
-              url('../imgs/wc3logo.jpg') center no-repeat ;
-
-              background-size: contain; */
 }
+
+h1 {
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+  color: goldenrod;
+  text-align: center;
+}
+
+h1 span {display: none;}
 
 img {
   max-width: 100%;  
   height: auto;
-  border-radius: 50%;
+}
+
+.logo {
+  width: 70%;
+  max-width: 20rem;
+  margin: 1rem auto -2rem;
 }
 
 .image {
   width: 50vw;
   max-width: 15rem;
-  margin-bottom: -3rem;
+  margin-bottom: -2rem;
   /* transform: translateY(100%) scale(.2); */
   transition: transform 2.5s ease-in-out;
+}
+  .image img {
+    border-radius: 50%;
+    animation: rotateImg 25s linear 3s infinite;
+    animation-play-state: paused;
+    border: 2px solid goldenrod;
+  }
+
+  .app.play .image img {
+    animation-play-state: running;
+  }
+
+@keyframes rotateImg {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .app {
@@ -49,7 +68,6 @@ img {
   overflow: hidden;
 }
   .app .soundtrack-info {
-    font-family: 'Reggae One', cursive;
     z-index: 20;
     display: flex;
     flex-direction: column;
@@ -59,7 +77,8 @@ img {
     height: 20vh;
     padding: 0 1rem;
     font-size: 1.25rem;
-    background: red;
+    background: darkred;
+    color: goldenrod;
     border-radius: 1rem 1rem 0 0;
     /* transform: translateY(90%); */
     transition: transform 1s ease-in-out .75s;
@@ -68,9 +87,13 @@ img {
     .soundtrack-info .title {
       text-transform: capitalize;
     }
+    .soundtrack-info #time {
+      font-size: .8rem;
+    }
     
     .progress-container {
-      background: lime;
+      background: goldenrod;
+      padding: 2px 4px;
       height: 1rem;
       border-radius: 1rem;
       border: 3px solid #222;
@@ -82,10 +105,11 @@ img {
       .progress-container .progress {
         position: relative;
         z-index: 1111;
-        background-color: blue;
+        background-color: #222;
         transition: width 0.1s linear;
         width: 0%;
-        height: .75rem;
+        height: 100%;
+        border-radius: 1rem;
       }
   
   .navigation {
@@ -93,17 +117,18 @@ img {
     display: flex;
     justify-content: space-evenly;
     grid-template-columns: repeat(3, 1fr);
-    background: blue; 
+    background: goldenrod; 
     width: 100vw;
     max-width: 30rem;
     height: 15vh;
   }
-    .navigation button {
-      background: transparent;
-      border: none;
-      outline: none;
-    }
+    /* .navigation button {
+    } */
       .navigation .action-btn {
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 0 2rem;
         font-size: 1.5rem;
         cursor: pointer;
       }
@@ -117,190 +142,3 @@ img {
   .app:not(.showApp) .image {
     transform: translateY(500%) scale(.1);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*   
-  
-  body {    
-    max-height: 100vh;
-    padding: 2rem 1rem;
-    background-color: #222;
-    color: #eee;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  h1 {
-    color: burlywood;
-  }
-
-  .offscreen {
-    position: absolute;
-    left: -100rem;
-  }
-
-  .app {
-    width: 90vw;
-    margin: 0 auto;
-    background-color: #222;
-    color: #222;
-    padding: 1rem;
-    border-radius: .25rem;
-    box-shadow: 0 20px 20px 0 rgba(152, 69, 69, 0.6);
-    display: flex;
-    position: relative;
-    z-index: 10;
-  }
-
-  .title {
-    text-transform: capitalize;
-  }
-  
-  .image {
-    position: relative;
-    width: 110px;
-  }
-  
-  .image::after {
-    content: '';
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    transform: translate(-50%, 50%);
-  }
-  
-  .image img {
-    border-radius: 50%;
-    object-fit: cover;
-    height: 110px;
-    width: inherit;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    animation: rotate 3s linear infinite;
-  
-    animation-play-state: paused;
-  }
-  
-  .app.play .image img {
-    animation-play-state: running;
-  }
-  
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-  
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-  }
-  
-  .action-btn {
-    background-color: transparent;
-    border: 0;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 10px;
-    margin: 0 20px;
-  }
-  
-  .action-btn.action-btn-big {
-    color: #3f2d44;
-    font-size: 30px;
-  }
-  
-  .action-btn:focus {
-    outline: 0;
-  }
-  
-  .soundtrack-info {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 15px 15px 0 0;
-    position: absolute;
-    top: 0;
-    left: 20px;
-    width: calc(100% - 40px);
-    padding: 10px 10px 10px 150px;
-    opacity: 0;
-    transform: translateY(0%);
-    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-    z-index: 0;
-  }
-  
-  .app.play .soundtrack-info {
-    opacity: 1;
-    transform: translateY(-100%);
-  }
-  
-  .soundtrack-info h4 {
-    margin: 0;
-  }
-  
-  .progress-container {
-    background: crimson;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 0;
-    height: 4px;
-    width: 100%;
-  }
-  
-  .progress {
-    background-color: darkblue;
-    border-radius: 5px;
-    height: 100%;
-    width: 0%;
-    transition: width 0.1s linear;
-  } */
