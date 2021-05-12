@@ -5,6 +5,7 @@ const playBtn = document.querySelector('#play');
 const nextBtn = document.querySelector('#next');
 const audio = document.querySelector('#audio');
 const progress = document.querySelector('#progress');
+const trackTime = document.querySelector('#time');
 const progressContainer = document.querySelector('.progress-container');
 const title = document.querySelector('.title');
 const cover = document.querySelector('#cover');
@@ -100,14 +101,13 @@ const updateProgress = (e) => {
 
     progress.style.width = `${progressPercent}%`;
 
-
-
-    function fmtMSS(time) {
-        return (time - (time %= 60)) / 60 + (9 < time ? ':' : ':0') + time;
-    }
-    
-    document.querySelector('#time').innerText = fmtMSS(Math.round(duration - currentTime));
+    trackTime.innerText = formatTime(Math.round(duration - currentTime));
 }
+
+const formatTime = (time) => {
+    return (time - (time %= 60)) / 60 + (9 < time ? ':' : ':0') + time;
+}
+
 
 audio.addEventListener('timeupdate', updateProgress);
 

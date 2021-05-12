@@ -14,6 +14,7 @@ body {
   color: #eee;
   font-family: 'Reggae One', cursive;
   text-align: center;
+  overflow: hidden;
 }
 
 h1 {
@@ -152,7 +153,8 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    align-items: space-evenly;
+    display: flex;
+    flex-direction: column;
     background: url('../imgs/bg.jpg'), #020003;
     background-size: contain;
     background-position: center;
@@ -164,5 +166,12 @@ img {
       letter-spacing: 10px;
       color: darkgoldenrod;
       text-align: center;
-      font-size: bold;
+      font-weight: bold;
     }
+
+@media only screen and (min-width: 768px) {
+  .overlay {
+    max-width: 50vw;
+    left: 25vw;
+  }
+}
