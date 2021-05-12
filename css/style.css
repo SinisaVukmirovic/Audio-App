@@ -19,7 +19,7 @@ body {
 h1 {
   font-size: 1.5rem;
   letter-spacing: 10px;
-  color: goldenrod;
+  color: darkgoldenrod;
   text-align: center;
 }
 
@@ -36,6 +36,14 @@ img {
   margin: 1rem auto -2rem;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
 .image {
   width: 50vw;
   max-width: 15rem;
@@ -47,7 +55,7 @@ img {
     border-radius: 50%;
     animation: rotateImg 25s linear 3s infinite;
     animation-play-state: paused;
-    border: 2px solid goldenrod;
+    border: 2px solid darkgoldenrod;
   }
 
   .app.play .image img {
@@ -60,13 +68,6 @@ img {
   }
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  overflow: hidden;
-}
   .app .soundtrack-info {
     z-index: 20;
     display: flex;
@@ -78,7 +79,7 @@ img {
     padding: 0 1rem;
     font-size: 1.25rem;
     background: darkred;
-    color: goldenrod;
+    color: darkgoldenrod;
     border-radius: 1rem 1rem 0 0;
     /* transform: translateY(90%); */
     transition: transform 1s ease-in-out .75s;
@@ -92,7 +93,7 @@ img {
     }
     
     .progress-container {
-      background: goldenrod;
+      background: darkgoldenrod;
       padding: 2px 4px;
       height: 1rem;
       border-radius: 1rem;
@@ -117,7 +118,7 @@ img {
     display: flex;
     justify-content: space-evenly;
     grid-template-columns: repeat(3, 1fr);
-    background: goldenrod; 
+    background: darkgoldenrod; 
     width: 100vw;
     max-width: 30rem;
     height: 15vh;
@@ -142,3 +143,24 @@ img {
   .app:not(.showApp) .image {
     transform: translateY(500%) scale(.1);
   }
+
+  .overlay {
+    position: absolute;
+    z-index: 222;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* display: grid;
+    place-items: center; */
+    background: url('../imgs/bg.jpg'), #020003;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: transform 2s ease-in-out;
+  }
+    .overlay span {
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      color: darkgoldenrod;
+    }

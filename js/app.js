@@ -1,3 +1,4 @@
+const overlay = document.querySelector('.overlay');
 const app = document.querySelector('.app');
 const prevBtn = document.querySelector('#prev');
 const playBtn = document.querySelector('#play');
@@ -7,6 +8,10 @@ const progress = document.querySelector('#progress');
 const progressContainer = document.querySelector('.progress-container');
 const title = document.querySelector('.title');
 const cover = document.querySelector('#cover');
+
+setTimeout(() => {
+    overlay.style.transform = 'translateY(100%)';
+}, 2000);
 
 const tracks = ['last days of the alliance', 'last days of the scourge', 'night elves song', 'remnants of the horde'];
 const appBg = ['cornflowerblue', 'cyan', 'greenyellow', 'burlywood'];
@@ -18,8 +23,6 @@ const loadTrack = (track, bg) => {
     title.innerText = track;
     audio.src = `./audio/${track}.mp3`;
     cover.src = `./imgs/${track}.jpg`;
-
-    // app.style.background = bg;
 }
 
 const playTrack = () => {
