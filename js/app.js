@@ -102,10 +102,11 @@ const updateProgress = (e) => {
 
 
 
-
-
-    document.querySelector('#time').innerText = ((duration - currentTime) / 60);
-
+    function fmtMSS(time) {
+        return (time - (time %= 60)) / 60 + (9 < time ? ':' : ':0') + time;
+    }
+    
+    document.querySelector('#time').innerText = fmtMSS(Math.round(duration - currentTime));
 }
 
 audio.addEventListener('timeupdate', updateProgress);
