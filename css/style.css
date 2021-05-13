@@ -20,8 +20,9 @@ body {
 h1 {
   font-size: 1.5rem;
   letter-spacing: 10px;
-  color: darkgoldenrod;
+  color: #eea62a;
   text-align: center;
+  text-transform: uppercase;
 }
 
 h1 span {display: none;}
@@ -56,7 +57,7 @@ img {
     border-radius: 50%;
     animation: rotateImg 25s linear 3s infinite;
     animation-play-state: paused;
-    border: 2px solid darkgoldenrod;
+    border: 2px solid #eea62a;
   }
 
   .app.play .image img {
@@ -79,12 +80,10 @@ img {
     height: 20vh;
     padding: 0 1rem;
     font-size: 1.25rem;
-    background: darkred;
-    color: darkgoldenrod;
-    border-radius: 1rem 1rem 0 0;
-    /* transform: translateY(90%); */
+    background: #5e2911;
+    outline: 5px solid #5e291178;
+    color: #eea62a;
     transition: transform 1s ease-in-out .75s;
-    /* transition-delay: .5s; */
   }
     .soundtrack-info .title {
       text-transform: capitalize;
@@ -95,7 +94,7 @@ img {
     }
     
     .progress-container {
-      background: darkgoldenrod;
+      background: #eea62a;
       padding: 2px 4px;
       height: 1rem;
       border-radius: 1rem;
@@ -120,7 +119,7 @@ img {
     display: flex;
     justify-content: space-evenly;
     grid-template-columns: repeat(3, 1fr);
-    background: darkgoldenrod; 
+    background: #eea62a; 
     width: 100vw;
     max-width: 30rem;
     height: 15vh;
@@ -155,8 +154,8 @@ img {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: url('../imgs/bg.jpg'), #020003;
-    background-size: contain;
+    background: url('../imgs/overlay.jpg'), #020003;
+    background-size: 90%;
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 1.5s ease-in-out;
@@ -164,9 +163,11 @@ img {
     .overlay span {
       font-size: 1.5rem;
       letter-spacing: 10px;
-      color: darkgoldenrod;
+      color: #eea62a;
       text-align: center;
       font-weight: bold;
+      text-transform: uppercase;
+      line-height: 2;
     }
 
 @media only screen and (min-width: 768px) {
