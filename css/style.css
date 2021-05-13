@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
 
+:root {
+  --golden-clr: #d28f20;
+  --brown-clr: var(--brown-clr);
+  --bg-clr: #020001;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,8 +16,8 @@ body {
   display: grid;
   place-items: space-between;
   height: 100vh;
-  background: #020003;
-  color: #eee;
+  background: var(--bg-clr);
+  /* color: #eee; */
   font-family: 'Reggae One', cursive;
   text-align: center;
   overflow: hidden;
@@ -20,7 +26,7 @@ body {
 h1 {
   font-size: 1.5rem;
   letter-spacing: 10px;
-  color: #eea62a;
+  color: var(--golden-clr);
   text-align: center;
   text-transform: uppercase;
 }
@@ -57,7 +63,7 @@ img {
     border-radius: 50%;
     animation: rotateImg 25s linear 3s infinite;
     animation-play-state: paused;
-    border: 2px solid #eea62a;
+    border: 2px solid var(--golden-clr);
   }
 
   .app.play .image img {
@@ -82,7 +88,7 @@ img {
     font-size: 1.25rem;
     background: #5e2911;
     outline: 5px solid #5e291178;
-    color: #eea62a;
+    color: var(--golden-clr);
     transition: transform 1s ease-in-out .75s;
   }
     .soundtrack-info .title {
@@ -94,7 +100,7 @@ img {
     }
     
     .progress-container {
-      background: #eea62a;
+      background: var(--golden-clr);
       padding: 2px 4px;
       height: 1rem;
       border-radius: 1rem;
@@ -119,10 +125,11 @@ img {
     display: flex;
     justify-content: space-evenly;
     grid-template-columns: repeat(3, 1fr);
-    background: #eea62a; 
+    background: var(--golden-clr); 
     width: 100vw;
     max-width: 30rem;
     height: 15vh;
+    padding: 1rem 0;
   }
     /* .navigation button {
     } */
@@ -136,6 +143,11 @@ img {
       }
       .navigation .large {
         font-size: 2rem;
+      }
+
+      .action-btn:hover i,
+      .action-btn:active i {
+        color: #5e2911;
       }
 
   .app:not(.showApp) .soundtrack-info {
@@ -154,7 +166,7 @@ img {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: url('../imgs/overlay.jpg'), #020003;
+    background: url('../imgs/overlay.jpg'), var(--bg-clr);
     background-size: 90%;
     background-position: center;
     background-repeat: no-repeat;
@@ -163,7 +175,7 @@ img {
     .overlay span {
       font-size: 1.5rem;
       letter-spacing: 10px;
-      color: #eea62a;
+      color: var(--golden-clr);
       text-align: center;
       font-weight: bold;
       text-transform: uppercase;
@@ -172,7 +184,6 @@ img {
 
 @media only screen and (min-width: 768px) {
   .overlay {
-    max-width: 50vw;
-    left: 25vw;
+    background-size: 40%;
   }
 }

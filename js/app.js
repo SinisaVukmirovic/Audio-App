@@ -102,6 +102,7 @@ const updateProgress = (e) => {
     progress.style.width = `${progressPercent}%`;
 
     trackTime.innerText = formatTime(Math.round(duration - currentTime));
+    // trackTime.innerText = formatTime(Math.round(currentTime));
 }
 
 const formatTime = (time) => {
@@ -117,7 +118,7 @@ function setProgress(e) {
     const clickOnX = e.offsetX;
     const duration = audio.duration;
 
-    console.log(width, clickOnX, duration);
+    // console.log(width, clickOnX, duration);
 
     audio.currentTime = (clickOnX / width) * duration;
 }
