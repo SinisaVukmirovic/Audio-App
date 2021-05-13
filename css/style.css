@@ -31,7 +31,10 @@ h1 {
   text-transform: uppercase;
 }
 
-h1 span {display: none;}
+h1 .offscreen {
+  position: absolute;
+  left: -100rem;
+}
 
 img {
   max-width: 100%;  
