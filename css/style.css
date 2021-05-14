@@ -187,6 +187,11 @@ img {
 
 @media only screen and (min-width: 768px) {
   .overlay {
-    background-size: 40%;
+    background-size: 60%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .overlay {
+    background-size: 35%;
   }
 }
